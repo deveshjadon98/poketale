@@ -1,0 +1,35 @@
+#container {
+ justify-content: space-around;
+ .section-title{
+  padding: 0 10px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+ }
+ #pokemon-list {
+  .card{
+   .card-content{
+    .card-title{
+     text-transform: uppercase;
+    }
+   }
+  }
+ }
+ .preloader-wrapper{
+  margin-left: 45%;
+  margin-top:10%;
+  width: 100px;
+  height: 100px;
+ }
+ #load-more{
+  margin-left: 45%;
+ }
+}
+
+.hidden{
+ display: none;
+}
+
+.visible{
+ display: block;
+}

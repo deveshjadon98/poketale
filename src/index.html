@@ -1,0 +1,52 @@
+<html>
+
+<head>
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ <div id="container">
+  <div class="row">
+   <nav>
+    <div class="nav-wrapper">
+     <form>
+      <div class="input-field">
+       <input id="search" type="search" required>
+       <label class="label-icon" for="search">
+        <i class="material-icons">search</i>
+       </label>
+       <i class="material-icons">close</i>
+       <a id="getAllSpecies" class="waves-effect waves-light btn-small">All Species</a>
+      </div>
+     </form>
+    </div>
+   </nav>
+  </div>
+  <div class="row section-title">
+   <span id="section-title-text">Species</span>
+  </div>
+  <!--Our species will be listed in pokemon-list container-->
+  <div id="pokemon-list" class="row">
+  </div>
+  <!--Loader for reflecting request state-->
+  <div class="preloader-wrapper active">
+   <div class="spinner-layer spinner-red-only">
+    <div class="circle-clipper left">
+     <div class="circle"></div>
+    </div>
+    <div class="gap-patch">
+     <div class="circle"></div>
+    </div>
+    <div class="circle-clipper right">
+     <div class="circle"></div>
+    </div>
+   </div>
+  </div>
+  <a id="load-more" class="waves-effect waves-light btn-small">Load More</a>
+ </div>
+
+ <script src="main.js"></script>
+</body>
+
+</html>
