@@ -41,15 +41,14 @@ class ApiService {
 
  //Logic to get all the evolutions from evolution chain
  evolution(chain) {
-  console.log('evolution', chain);
   const len = chain.evolves_to.length;
   if (len === 0) {
    this.evolutionChain.set(chain.species.name, chain.species);
   } else {
    for (let i = 0; i < len; i++) {
     const poke = chain.evolves_to[i]
-    this.evolution(poke)
     this.evolutionChain.set(chain.species.name, chain.species);
+    this.evolution(poke)
    }
   }
  }
@@ -108,7 +107,6 @@ class ApiService {
     name = name.charAt(0).toUpperCase() + name.slice(1);
     sectionTitle.innerHTML = `${name}'s Evolution Chain`;
     this.evolution(data.chain);
-    console.log('evolution_chain', this.evolutionChain.values());
     if (this.evolutionChain.size > 0) {
      for (let [key, pokemon] of this.evolutionChain) {
       let id = parseInt((pokemon.url.slice(0, -1)).replace(speciesUrl, ''));
